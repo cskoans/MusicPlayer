@@ -5,8 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MusicPlayer"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="My WPF Music Player" Height="330" Width="460" Background="#c8cfc3" WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <MediaElement
+            Name="MyMediaElement"
+            LoadedBehavior="Manual"
+            Volume="75"
+            MediaFailed="MediaFailedHandler"
+            Source="C:\Users\linch\Desktop\Allegro from Duet in C Major.mp3" />
+
+        <Button Click="Play" Width="100" Height="25">Play</Button>
     </Grid>
 </Window>

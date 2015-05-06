@@ -24,5 +24,15 @@ namespace MusicPlayer
         {
             InitializeComponent();
         }
+
+        void Play(object sender, RoutedEventArgs args)
+        {
+            MyMediaElement.Play();
+        }
+
+        void MediaFailedHandler(object sender, ExceptionRoutedEventArgs e)
+        {
+            Console.WriteLine(e.ErrorException);
+        }
     }
 }
